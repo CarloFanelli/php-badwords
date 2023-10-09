@@ -9,10 +9,10 @@
 
 <body>
 
-    <form action="script.php">
+    <form action="script.php" method="POST">
         <div>
             <label for="paragraph">Inserisci il testo</label>
-            <input type="text" name="paragraph" id="paragraph">
+            <textarea name="paragraph" id="paragraph" cols="25" rows="5"></textarea>
         </div>
         <div>
             <label for="badword">Inserisci la parola da censurare</label>
