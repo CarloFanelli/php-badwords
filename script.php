@@ -6,6 +6,9 @@ $paragraph = $_POST["paragraph"];
 $paragraph_length = strlen($paragraph);
 
 $badword = $_POST['badword'];
+
+// use str_replace
+$final_text = str_replace($badword, '***', $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +21,13 @@ $badword = $_POST['badword'];
 </head>
 
 <body>
-    <p><?php echo $paragraph ?></p>
+
+    <p>testo non censurato : <?php echo $paragraph ?></p>
     <p>contiente <?php echo $paragraph_length ?> caratteri</p>
-    <p><?php echo $badword ?></p>
+    <p>parola da censurare: <?php echo $badword ?></p>
+
+    <p>testo censurato :</p>
+    <p><?php echo $final_text ?></p>
 
 </body>
 
